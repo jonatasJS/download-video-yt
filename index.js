@@ -67,11 +67,11 @@ app.use(express.static('public'));
   });
 
   app.get("/api/v1/:type/:id", async (req, res) => {
-    const id = Number(req.params.id)-1;
     const type = req.params.type;
+    const id = Number(req.params.id)-1;
     const obj = await fls(`./public/${type}`);
 
-    if (id >= obj.length) return res.status(400).json({
+    if (id > obj.length) return res.status(400).json({
       message: 'Invalid ID'
     });
 
