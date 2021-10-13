@@ -76,7 +76,7 @@ app.use(express.static('public'));
     });
 
     res.status(200).json({
-      id: id++,
+      id: req.params.id,
       name: obj[id].name,
       directory: `/${type}/${obj[id].name}`
     });
