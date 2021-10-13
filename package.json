@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "easy-logs-js": "^1.0.3",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.5.0",
+    "youtube-dlsr": "^1.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "name": "download-video-yt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
