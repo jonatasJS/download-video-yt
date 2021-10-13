@@ -36,7 +36,7 @@ app.use(express.static('public'));
   }));
 
   app.get("/api/v1", (req, res) => res.json({
-    rotes: [ '/api/v1/videos', '/api/v1/download' ]
+    rotes: [ '/api/v1/video', '/api/v1/download' ]
   }));
 
   app.get("/api/v1/:type", async (req, res) => {
