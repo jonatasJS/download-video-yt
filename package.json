@@ -1,4 +1,11 @@
 {
+  "name": "download-video-yt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js"
@@ -11,12 +18,5 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.13"
-  },
-  "name": "download-video-yt",
-  "version": "1.0.0",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }
