@@ -49,6 +49,10 @@ app.use(express.static('public'));
   app.get("/api/v1/download", async (req, res) => {
     const title = req.body.title;
 
+    Log(title);
+    Log(req.body.title);
+    Log(req.body);
+
     if(title == undefined) return res.status(404).json({
       message: 'Title/name of video/playlist/channel not defined'
     });
@@ -71,7 +75,7 @@ app.use(express.static('public'));
     const id = Number(req.params.id)-1;
     const obj = await fls(`./public/${type}`);
 
-    if (id > obj.length || id < 0) return res.status(400).json({
+    if (id > obj.length) return res.status(400).json({
       message: 'Invalid ID'
     });
 
