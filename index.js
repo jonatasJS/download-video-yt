@@ -36,10 +36,10 @@ app.use(express.static('public'));
   }));
 
   app.get("/api/v1", (req, res) => res.json({
-    rotes: [ '/api/v1/video', '/api/v1/download' ]
+    rotes: [ '/api/v1/file/video', '/api/v1/download' ]
   }));
 
-  app.get("/api/v1/:type", async (req, res) => {
+  app.get("/api/v1/file/:type", async (req, res) => {
     const type = req.params.type;
     const obj = await fls(`./public/${type}`, type);
 
@@ -66,7 +66,7 @@ app.use(express.static('public'));
     });
   });
 
-  app.get("/api/v1/:type/:id", async (req, res) => {
+  app.get("/api/v1/file/:type/:id", async (req, res) => {
     const type = req.params.type;
     const id = Number(req.params.id)-1;
     const obj = await fls(`./public/${type}`);
