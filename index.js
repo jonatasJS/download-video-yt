@@ -47,11 +47,9 @@ app.use(express.static('public'));
   });
 
   app.get("/api/v1/download", async (req, res) => {
-    const title = req.body.title;
-
-    Log(title);
-    Log(req.body.title);
     Log(req.body);
+    const title = req.body.title;
+    Log(req.body.title);
 
     if(title == undefined) return res.status(404).json({
       message: 'Title/name of video/playlist/channel not defined'
